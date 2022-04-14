@@ -3,5 +3,5 @@ import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
 // https://astro.build/config
 export default defineConfig({
-    integrations: [vue(), tailwind()],
+    integrations: [vue(), tailwind({ config: { applyBaseStyles: false } })],
 });

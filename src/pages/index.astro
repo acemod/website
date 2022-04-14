@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 // Component Imports
 import Projects from "../components/projects.astro";
 import Slack from "../components/slack.astro";
@@ -15,10 +17,6 @@ let title = 'acemod';
     <title>{title}</title>
 
     <link rel="icon" type="image/png" href="/favicon.png" />
-
-    <style is:global>
-        @import "../styles/global.css";
-    </style>
 </head>
 
 <body>
