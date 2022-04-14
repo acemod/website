@@ -1,28 +1,48 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
+:root {
+    --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    --font-body: system-ui, var(--font-fallback);
+    --user-font-scale: 1rem - 16px;
+    --max-width: calc(100% - 1rem);
 }
 
-:root {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    font-size: 1rem;
-    --user-font-scale: 1rem - 16px;
-    font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+@media (min-width: 50em) {
+    :root {
+        --max-width: 46em;
+    }
 }
 
 body {
-    padding: 4rem 2rem;
-    width: 100%;
+    @apply bg-gray-800 text-white;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    display: grid;
-    justify-content: center;
-    background: #f9fafb;
-    color: #111827;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-size: clamp(0.9rem, 0.75rem + 0.375vw + var(--user-font-scale), 1rem);
+    line-height: 1.5;
+    max-width: 100vw;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #111827;
-        color: #fff;
-    }
+h1 {
+    font-size: 3.25rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+a {
+    @apply border-white border-b-2
 }

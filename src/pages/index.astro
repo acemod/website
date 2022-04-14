@@ -1,8 +1,7 @@
 ---
-// Style Imports
-import '../styles/global.css';
-import '../styles/home.css';
 // Component Imports
+import Projects from "../components/projects.astro";
+import Slack from "../components/slack.astro";
 
 // Component Script:
 let title = 'acemod';
@@ -17,23 +16,20 @@ let title = 'acemod';
 
     <link rel="icon" type="image/png" href="/favicon.png" />
 
-    <style>
-        header {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            max-width: min(100%, 68ch);
-        }
+    <style is:global>
+        @import "../styles/global.css";
     </style>
 </head>
 
 <body>
-    <main>
+    <main class="max-w-5xl mx-auto text-center">
         <header>
             <div>
                 <h1>acemod</h1>
             </div>
         </header>
+        <Projects />
+        <Slack />
     </main>
 </body>
 
