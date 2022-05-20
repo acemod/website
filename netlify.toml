@@ -1,9 +1,3 @@
 [build]
   publish = "dist"
   command = "npm run build"
-
-[[redirects]]
-  from = "/slack"
-  to = "https://join.slack.com/t/ace3public/shared_invite/zt-ff8vfh69-4XohBC7WAh7aAHrbEBidTQ"
-  status = 301
-  force = true
