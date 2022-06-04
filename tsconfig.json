@@ -1,5 +1,6 @@
 {
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "moduleResolution": "node"
+    "strict": true
   }
 }
