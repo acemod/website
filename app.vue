@@ -1,6 +1,9 @@
 <script setup>
 useHead({
-    title: "Vitesse Nuxt 3",
+    title: "ACE Mod",
+    htmlAttrs: {
+        lang: "en",
+    },
     link: [
         {
             rel: "icon", type: "image/png", href: "/nuxt.png",
