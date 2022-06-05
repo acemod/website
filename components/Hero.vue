@@ -19,7 +19,7 @@ defineProps<Props>()
                 <h1 class="text-6xl font-bold mb-4">
                     <slot name="title" />
                 </h1>
-                <p class="text-3xl">
+                <p class="text-3xl mb-0">
                     <slot name="tagline" />
                 </p>
             </div>

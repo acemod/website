@@ -8,7 +8,7 @@ withDefaults(defineProps<Props>(), { gaps: true })
 
 <template>
     <div
-        class="grid mb-8 md:grid-cols-2 lg:grid-cols-4 lg:md:mb-16"
+        class="grid mb-16 md:grid-cols-2 lg:grid-cols-4"
         :class="{ 'gap-4 lg:gap-8': gaps }"
     >
         <div class="h-full">
