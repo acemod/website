@@ -6,6 +6,6 @@
         justify-center
         gap-3
     >
-        <DarkToggle />
+        <FooterDarkToggle />
     </div>
 </template>
