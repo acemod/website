@@ -1,6 +1,7 @@
 {
   "extends": "@antfu",
   "rules": {
+    "curly": ["error", "all"],
     "quotes": "off",
     "@typescript-eslint/quotes": ["error", "double", { "avoidEscape": true }],
     "indent": "off",

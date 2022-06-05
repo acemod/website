@@ -26,6 +26,16 @@ const toggleMobileMenu = () => {
 const closeMenu = () => {
     mobileMenuOpen.value = false
 }
+
+watch(() => mobileMenuOpen.value, () => {
+    const htmlElement = document.querySelector("html")
+    if (mobileMenuOpen.value) {
+        htmlElement!.classList.add("overflow-y-hidden")
+    }
+    else {
+        htmlElement!.classList.remove("overflow-y-hidden")
+    }
+})
 </script>
 
 <template>

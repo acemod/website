@@ -1,10 +1,6 @@
 <template>
     <div
-        text="xl gray4"
-        m-5
-        flex
-        justify-center
-        gap-3
+        class="py-8 flex justify-center gap-4 text-xl text-gray4"
     >
         <FooterDarkToggle />
     </div>
