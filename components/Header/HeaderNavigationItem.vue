@@ -13,6 +13,7 @@ defineProps<Props>()
         <a
             class="font-bold transition-colors hover:text-brand-primary text-2xl md:text-base"
             :href="link.href" :target="link.target"
+            :disabled="link.disabled"
         >
             {{ link.text }}
         </a>

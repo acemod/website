@@ -27,8 +27,21 @@ body,
     padding: 0;
 }
 
+html {
+    color: #222;
+}
+
 html.dark {
     background: #222;
     color: white;
+}
+
+main h1,
+main h2,
+main h3,
+main h4,
+main p {
+    margin-bottom: 0.5em;
+    hyphens: auto;
 }
 </style>

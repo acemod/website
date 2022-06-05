@@ -8,9 +8,9 @@ const links: Link[] = [
         target: "_blank",
     },
     {
-        href: "https://anvil.acemod.org",
+        href: "#",
         text: "Anvil",
-        target: "_blank",
+        disabled: true,
     },
     {
         href: "https://github.com/acemod",
@@ -37,7 +37,7 @@ const closeMenu = () => {
 
             <nav
                 class="mobile-nav items-center absolute hidden w-100vw h-100vh bg-white dark:bg-black dark:bg-opacity-90 flex-col justify-center top-0 left-0
-                md:relative md:flex md:flex-row md:w-auto md:h-auto md:bg-transparent"
+                md:relative md:flex md:flex-row md:w-auto md:h-auto md:bg-transparent md:dark:bg-transparent"
                 :class="{ '!flex': mobileMenuOpen, 'active': mobileMenuOpen }"
             >
                 <template v-for="link in links" :key="link.href">
@@ -59,10 +59,6 @@ const closeMenu = () => {
 </template>
 
 <style scoped>
-.mobile-nav.active {
-
-}
-
 .mobile-nav-button .top {
     width: 0.75rem;
 }
