@@ -1,9 +1,7 @@
 <template>
     <Header />
     <main class="mt-0 md:mt-16 pb-8">
-        <LayoutContainer>
-            <slot />
-        </LayoutContainer>
+        <slot />
     </main>
     <Footer />
 </template>

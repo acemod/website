@@ -8,7 +8,7 @@ withDefaults(defineProps<Props>(), { gaps: true })
 
 <template>
     <div
-        class="grid mb-8 md:grid-cols-2 lg:grid-cols-4 lg:md:mb-16"
+        class="grid mb-8 md:grid-cols-2 lg:md:mb-16"
         :class="{ 'gap-4 lg:gap-8': gaps }"
     >
         <div class="h-full">
@@ -16,12 +16,6 @@ withDefaults(defineProps<Props>(), { gaps: true })
         </div>
         <div class="h-full">
             <slot name="col2" />
-        </div>
-        <div class="h-full">
-            <slot name="col3" />
-        </div>
-        <div class="h-full">
-            <slot name="col4" />
         </div>
     </div>
 </template>

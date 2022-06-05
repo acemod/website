@@ -8,7 +8,7 @@
 header {
     -webkit-backdrop-filter: saturate(50%) blur(0.5rem);
     backdrop-filter: saturate(50%) blur(0.5rem);
-    /* background-color: rgba(0,0,0,0.35); */
+    background-color: rgba(255,255,255,0.35);
 }
 
 .dark header {

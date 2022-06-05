@@ -4,7 +4,7 @@
         my-4 p-4 border-1 rounded-lg
         text-white transition-colors
         md:w-1/3"
-        href="#" target="_blank"
+        href="https://acemod.org/discord" target="_blank"
     >
         <span
             class="inline-block w-8 h-8 mr-2"
