@@ -30,7 +30,7 @@ const heroImage: Image = {
                 </LayoutImageBox>
             </template>
             <template #col2>
-                <LayoutImageBox :image="{ src: '/backdrop_anvil.webp', alt: 'Anvil', width: 736, height: 414 }" :link="{ href: '', disabled }">
+                <LayoutImageBox :image="{ src: '/backdrop_anvil.webp', alt: 'Anvil', width: 736, height: 414 }" :link="{ href: '', disabled: true }">
                     Anvil<br>
                     <small class="font-normal italic">coming soon</small>
                 </LayoutImageBox>
