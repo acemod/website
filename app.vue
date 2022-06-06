@@ -19,6 +19,13 @@ useHead({
 </template>
 
 <style>
+:root {
+    --ace-dark-base-color-values: 34,34,34;
+    --ace-dark-base-color: rgb(var(--ace-dark-base-color-values));
+    --ace-dark-bg-color: var(--ace-dark-base-color);
+    --ace-text-color: var(--ace-dark-base-color);
+}
+
 html,
 body,
 #__nuxt {
@@ -28,11 +35,11 @@ body,
 }
 
 html {
-    color: #222;
+    color: var(--ace-text-color);
 }
 
 html.dark {
-    background: #222;
+    background: var(--ace-dark-bg-color);
     color: white;
 }
 
