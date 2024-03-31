@@ -1,8 +1,136 @@
 ---
-
+import Button from './button.astro';
+import IconButton from './icon-button.astro';
 ---
-<h2>Our projects:</h2>
 
-<h3>
-    <a href="https://ace3.acemod.org">ACE3</a>
-</h3>
+<style lang="scss">
+    main {
+        display: grid;
+        grid-template: 1fr 1fr / auto;
+        color: #fff;
+    }
+
+    section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        div {
+            padding: 32px;
+            backdrop-filter: blur(2px);
+        }
+
+        h1 {
+            padding: 0;
+            margin: 0;
+
+            img {
+                max-width: 50%;
+                min-width: 200px;
+            }
+        }
+
+        nav {
+            display: flex;
+            gap: 16px;
+        }
+    }
+
+    #ace3 {
+        background-image: url("/img/bg-ace3.webp");
+        background-position: 0 center;
+    }
+
+    #ace-anvil {
+        background-image: url("/img/bg-anvil.webp");
+        background-position: 100% center;
+    }
+
+    /* Here be dragons */
+    @media (min-width: 800px) {
+        main {
+            grid-template: auto / 1fr 1fr;
+        }
+
+        #ace3 {
+            margin-right: -64px;
+
+            div {
+                padding-right: 128px;
+            }
+        }
+        #ace-anvil {
+            margin-left: -64px;
+            clip-path: polygon(96px 0, 100% 0, 100% 100%, 32px 100%);
+            transition: clip-path 0.5s ease-in-out;
+
+            div {
+                padding-left: 128px;
+            }
+        }
+
+        main:hover #ace-anvil {
+            clip-path: polygon(128px 0, 100% 0, 100% 100%, 64px 100%);
+
+            &:hover {
+                clip-path: polygon(64px 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+    }
+</style>
+
+<main>
+    <section id="ace3">
+        <div>
+            <h1>
+                <a href="https://ace3.acemod.org/">
+                    <img src="/img/ace3.png" alt="ACE3" />
+                </a>
+            </h1>
+            <p>
+                With over 1,000,000 subscribers on the Steam Workshop, ACE3 is the
+                most popular realism mod for Arma 3 and provides an entirely new
+                gameplay experience.
+            </p>
+            <nav>
+                <Button text="Documentation" href="https://ace3.acemod.org/" />
+                <IconButton
+                    text="ACE3 on Steam Workshop"
+                    href="https://steamcommunity.com/sharedfiles/filedetails/?id=463939057"
+                    src="/img/steam.png" />
+                <IconButton
+                    text="ACE3 on GitHub"
+                    href="https://github.com/acemod/ACE3"
+                    src="/img/github.png" />
+            </nav>
+        </div>
+    </section>
+    <section id="ace-anvil">
+        <div>
+            <h1>
+                <a href="https://anvil.acemod.org/">
+                    <img src="/img/ace-anvil.png" alt="ACE Anvil" />
+                </a>
+            </h1>
+            <p>
+                ACE Anvil is our experimental test platform for Arma Reforger, the
+                first Arma game running on the Enfusion engine.
+            </p>
+            <nav>
+                <Button text="Documentation" href="https://anvil.acemod.org/" />
+                <!--
+                <IconButton
+                    text="ACE3 on Arma Reforger Workshop"
+                    href="TODO"
+                    src="/img/reforger.png" />
+                -->
+                <IconButton
+                    text="ACE3 on GitHub"
+                    href="https://github.com/acemod/ACE-Anvil"
+                    src="/img/github.png" />
+            </nav>
+        </div>
+    </section>
+</main>

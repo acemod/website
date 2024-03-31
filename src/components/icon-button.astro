@@ -1,0 +1,22 @@
+---
+const { text, src, href } = Astro.props;
+---
+<style lang="scss">
+    img {
+        height: 32px;
+        width: 32px;
+        border-radius: 16px;
+        outline: 3px solid transparent;
+        outline-offset: -1px;
+        transition: outline 0.1s ease-in-out;
+
+        &:hover, &:active {
+            outline: 3px solid #ba2619;
+            transition: outline 0.3s ease-in-out;
+        }
+    }
+</style>
+
+<a href={href}>
+    <img src={src} alt={text}>
+</a>

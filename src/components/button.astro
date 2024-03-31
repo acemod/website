@@ -1,0 +1,27 @@
+---
+const { text, href } = Astro.props;
+---
+
+<style lang="scss">
+    a {
+        display: inline-flex;
+        align-items: center;
+        background-color: #fff;
+        color: #000;
+        height: 32px;
+        padding: 0 16px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        border-radius: 16px;
+        outline: 3px solid transparent;
+        outline-offset: -1px;
+        transition: outline 0.1s ease-in-out;
+
+        &:hover, &:active {
+            outline: 3px solid #ba2619;
+            transition: outline 0.3s ease-in-out;
+        }
+    }
+</style>
+
+<a href={href}>{text}</a>
