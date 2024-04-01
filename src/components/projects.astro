@@ -55,6 +55,7 @@ import IconButton from './icon-button.astro';
     /* Here be dragons */
     @media (min-width: 800px) {
         main {
+            background: #23272a;
             grid-template: auto / 1fr 1fr;
         }
 
@@ -67,7 +68,12 @@ import IconButton from './icon-button.astro';
         }
         #ace-anvil {
             margin-left: -64px;
-            clip-path: polygon(96px 0, 100% 0, 100% 100%, 32px 100%);
+            clip-path: polygon(
+                96px -1%,
+                101% -1%,
+                101% 101%,
+                32px 101%
+            );
             transition: clip-path 0.5s ease-in-out;
 
             div {
@@ -76,10 +82,20 @@ import IconButton from './icon-button.astro';
         }
 
         main:hover #ace-anvil {
-            clip-path: polygon(128px 0, 100% 0, 100% 100%, 64px 100%);
+            clip-path: polygon(
+                128px -1%,
+                101% -1%,
+                101% 101%,
+                64px 101%
+            );
 
             &:hover {
-                clip-path: polygon(64px 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(
+                    64px -1%,
+                    101% -1%,
+                    101% 101%,
+                    0 101%
+                );
             }
         }
     }
