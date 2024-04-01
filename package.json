@@ -15,5 +15,8 @@
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24",
     "vue": "^3.2.30"
+  },
+  "dependencies": {
+    "sass": "^1.72.0"
   }
 }

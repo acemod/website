@@ -1,34 +1,35 @@
 ---
 import "../styles/global.css";
-
-// Component Imports
 import Projects from "../components/projects.astro";
 import Discord from "../components/discord.astro";
-
-// Component Script:
-let title = 'acemod';
-
 ---
+
+<style lang="scss">
+    body {
+        display: grid;
+        grid-template: auto max-content / auto;
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    main {
+        display: relative;
+    }
+</style>
+
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>ACE - The realism mod for Arma</title>
+        <link rel="icon" href="favicon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>{title}</title>
-
-    <link rel="icon" type="image/png" href="/favicon.png" />
-</head>
-
-<body>
-    <main class="max-w-5xl mx-auto text-center">
-        <header>
-            <div>
-                <h1>acemod</h1>
-            </div>
-        </header>
+    <body>
         <Projects />
         <Discord />
-    </main>
-</body>
-
+    </body>
 </html>
